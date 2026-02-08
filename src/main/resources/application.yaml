@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: items-gateway-service
+
+  config:
+    import:
+      - optional:file:.env[.properties]
+      - classpath:rabbit.yml
