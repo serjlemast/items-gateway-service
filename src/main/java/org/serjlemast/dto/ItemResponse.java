@@ -7,5 +7,7 @@ import java.util.List;
 
 @Data
 public class ItemResponse {
+    private String correlationId;
     private List<Item> items;
+    private Integer total;
 }
