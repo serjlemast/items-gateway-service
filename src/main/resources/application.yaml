@@ -2,6 +2,10 @@ spring:
   application:
     name: items-gateway-service
 
+  threads:
+    virtual:
+      enabled: true
+
   config:
     import:
       - optional:file:.env[.properties]

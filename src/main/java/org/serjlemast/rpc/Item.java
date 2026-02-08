@@ -1,4 +1,4 @@
-package org.serjlemast.model;
+package org.serjlemast.rpc;
 
 import java.time.Instant;
 

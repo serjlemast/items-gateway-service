@@ -5,3 +5,11 @@ spring:
     username: ${RABBIT_USERNAME:user}
     password: ${RABBIT_PASSWORD:pass}
     virtual-host: ${RABBIT_VHOST:vhost}
+
+rabbit:
+  reply:
+    queue: ${RABBIT_REPLY_QUEUE:remote_call_queue}
+  request:
+    queue: ${RABBIT_REQUEST_QUEUE:items_rpc_queue}
+    exchange:  ${RABBIT_REQUEST_EXCHANGE:items_rpc_exchange}
+    routing-key:  ${RABBIT_REQUEST_ROUTING_KEY:items_rpc_key}

@@ -1,6 +1,7 @@
 package org.serjlemast.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.serjlemast.dto.ItemRequest;
 import org.serjlemast.dto.ItemResponse;
 import org.serjlemast.rpc.ItemsRpcClient;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,7 @@ public class ItemsController {
 
   @GetMapping("/items")
   public ResponseEntity<ItemResponse> getItems() {
-    return ResponseEntity.ok(rpcClient.fetchItems());
+    ItemRequest request = new ItemRequest();
+    return ResponseEntity.ok(rpcClient.fetchItems(request));
   }
 }
